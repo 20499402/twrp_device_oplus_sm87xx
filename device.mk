@@ -17,7 +17,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_wit
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Configure twrp common.mk
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pitchblack/config/common.mk)
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL    := 35
@@ -38,3 +38,4 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+PRODUCT_BUILD_SUPER_PARTITION := false
